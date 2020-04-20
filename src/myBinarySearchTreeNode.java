@@ -65,12 +65,12 @@ class myBinarySearchTreeNode{
 
     if(this.left != null){
 
-      leftHeight = this.left.height();
+      leftHeight = this.left.height()+1;
     }
 
     if(this.right != null){
 
-      rightHeight = this.right.height();
+      rightHeight = this.right.height()+1;
     }
 
     return Math.max(leftHeight, rightHeight);

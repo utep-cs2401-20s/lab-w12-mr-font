@@ -59,10 +59,40 @@ class myBinarySearchTreeNodeTest {
 
     @org.junit.jupiter.api.Test
     void height() {
+        //This test will see if the height method works with a test array that has elements from 1 to 100.
+        //Base case
+        //
+        //Array length: 10
+        //Range 1 to 100
+        //
+        //height: 4
+        //
+        //Result: The method passed, with the given array and value
+
+        int[] arrayHeight = {76,12,23,66,97,55,1,21,98,69};
+        myBinarySearchTreeNode test3 = new myBinarySearchTreeNode(arrayHeight);
+        test3.print();
+        assertEquals(4, test3.height());
     }
 
     @org.junit.jupiter.api.Test
-    void depth() {
+    void depth1() {
+
+        //This test will see if the height method works with a test array that has elements from 1 to 100.
+        //Base case
+        //
+        //Array length: 10
+        //Range 1 to 100
+        //
+        //Search value: 64
+        //
+        //Result: The method passed, with the given array and value
+
+        int[] arrayDepth = {70,30,91,33,64,36,15,57,75,50};
+        myBinarySearchTreeNode test4 = new myBinarySearchTreeNode(arrayDepth);
+        test3.print();
+        assertEquals(, test3.height());
+
     }
 
     @org.junit.jupiter.api.Test
