@@ -95,7 +95,7 @@ class myBinarySearchTreeNode{
       if (this.right != null){
         searchDepth =  this.right.depth(search) +1;
       }
-    }else if(search == myValue){
+    }else if(search == this.myValue){
       return searchDepth;
     }
     return -1;

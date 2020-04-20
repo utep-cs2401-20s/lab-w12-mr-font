@@ -86,16 +86,32 @@ class myBinarySearchTreeNodeTest {
         //
         //Search value: 64
         //
-        //Result: The method passed, with the given array and value
+        //Result: The method failed, with the given array and value. Still working to figure out what is wrong with
+        // the method
 
         int[] arrayDepth = {70,30,91,33,64,36,15,57,75,50};
         myBinarySearchTreeNode test4 = new myBinarySearchTreeNode(arrayDepth);
-        test3.print();
-        assertEquals(, test3.height());
+        test4.print();
+        assertEquals(3, test4.depth(64));
 
     }
 
     @org.junit.jupiter.api.Test
-    void size() {
+    void size1() {
+        //This test will see if the height method works with a test array that has elements from 1 to 100.
+        //In the case there is a set of dup values, 42 and 42, and so the size should be 9
+        //
+        //Array length: 10
+        //Range 1 to 100
+        //
+        //Size value: 9
+        //
+        //Result: The method passed, with the given array and value. Additionally the correct error mesage was printed
+        //by the method
+
+        int[] arraySize = {62,28,42,67,36,43,75,2,63,42};
+        myBinarySearchTreeNode test5 = new myBinarySearchTreeNode(arraySize);
+        test5.print();
+        assertEquals(9, test5.size());
     }
 }
