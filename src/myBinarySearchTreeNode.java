@@ -6,24 +6,26 @@ class myBinarySearchTreeNode{
   myBinarySearchTreeNode(int inValue){
     // created a new node with empty child pointers
 
-    int myValue = inValue;
+    myValue = inValue;
     left = null;
     right = null;
 
   }
   
-  myBinarySearchTreeNode(int[] A){
+  myBinarySearchTreeNode(int[] A) {
     // creates a new Binary Search Tree rooted at the first value in the array
     /// by inserting elements into the tree in the order they are given in A.
 
     myBinarySearchTreeNode tree = new myBinarySearchTreeNode(A[0]);
+
+    this.myValue = A[0];
+
     for (int i = 1; i < A.length; ++i){
 
-      tree.insert(A[i]);
+      this.insert(A[i]);
     }
-
   }
-  
+
   public void insert(int inValue){
     // This method takes a new integer as input and decides 
     // if it should be place: 
@@ -87,11 +89,11 @@ class myBinarySearchTreeNode{
     if(search < this.myValue){
 
       if(this.left != null){
-        searchDepth = this.left.depth(search);
+        searchDepth = this.left.depth(search) +1;
       }
     }else if (search > this.myValue){
       if (this.right != null){
-        searchDepth =  this.right.depth(search);
+        searchDepth =  this.right.depth(search) +1;
       }
     }else if(search == myValue){
       return searchDepth;
